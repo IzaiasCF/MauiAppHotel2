@@ -9,7 +9,7 @@
         <VerticalStackLayout Padding="30,0" Spacing="25">
             <Image
                 Aspect="AspectFit"
-                HeightRequest="185"
+                HeightRequest="150"
                 SemanticProperties.Description="dot net bot in a race car number eight"
                 Source="hotel.png" />
 

@@ -8,7 +8,7 @@
 
             // MainPage = new AppShell();
             // Alterando a página inicial:
-            MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
+            MainPage = new NavigationPage(new Views.TelaInicial());
         }
 
         // Definição da largura/altura do App

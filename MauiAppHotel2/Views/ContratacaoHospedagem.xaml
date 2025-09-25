@@ -3,110 +3,116 @@
     x:Class="MauiAppHotel2.Views.ContratacaoHospedagem"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    NavigationPage.HasNavigationBar="False"
+    Title="Contratação da Hospedagem"
     BackgroundColor="{StaticResource Gray900}"
-    Title="Contratação da Hospedagem">
+    NavigationPage.HasNavigationBar="False">
 
-    <VerticalStackLayout 
-        VerticalOptions="CenterAndExpand"
-        Padding="10">
+    <VerticalStackLayout Padding="10" VerticalOptions="CenterAndExpand">
 
-        <!--Inserção da imagem .png-->
+        <!--  Inserção da imagem hotel.png  -->
         <Image
-             Aspect="AspectFit"
-             HeightRequest="150"
-             Source="hotel.png" />
+            Aspect="AspectFit"
+            HeightRequest="150"
+            Source="hotel.png" />
 
         <Label
-            HorizontalOptions="Center"
-            Text="Hotel Campos do Jordão"
             FontFamily="Kalam"
             FontSize="30"
+            HorizontalOptions="Center"
+            Text="Hotel Campos do Jordão"
             TextColor="DarkOliveGreen" />
 
-        <Frame BackgroundColor="Black">
+        <Frame Margin="5" BackgroundColor="Black">
 
             <VerticalStackLayout>
 
-                <Grid RowDefinitions="*, *"
-                      ColumnDefinitions="*, *, *">
-                    
-                    <!--Grid dos adultos-->
-                    <Label Grid.Row="0" Grid.Column="0"
-                           Text="Adultos"
-                           TextColor="DarkGreen"/>
+                <Grid ColumnDefinitions="*, *, *" RowDefinitions="*, *">
 
-                    <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="Green"
-                           Text="{Binding Value}"
-                           BindingContext="{x:Reference stp_adultos}"
-                           FontAttributes="Bold" />
+                    <!--  Grid dos adultos  -->
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Adultos"
+                        TextColor="DarkGreen" />
 
-                    <Stepper Grid.Row="0" Grid.Column="2"
-                             x:Name="stp_adultos"
-                             Minimum="0"
-                             Maximum="10"
-                             Increment="1"
-                             Background="DarkOliveGreen"
-                             BackgroundColor="DarkOliveGreen" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        BindingContext="{x:Reference stp_adultos}"
+                        FontAttributes="Bold"
+                        Text="{Binding Value}"
+                        TextColor="Green" />
 
-                    <!--Grid das crianças-->
-                    <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças"
-                           TextColor="DarkGreen"/>
+                    <Stepper
+                        x:Name="stp_adultos"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Background="DarkOliveGreen"
+                        BackgroundColor="DarkOliveGreen"
+                        Increment="1"
+                        Maximum="10"
+                        Minimum="0" />
 
-                    <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="Green"
-                           Text="{Binding Value}"
-                           BindingContext="{x:Reference stp_criancas}"
-                           FontAttributes="Bold" />
+                    <!--  Grid das crianças  -->
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Crianças"
+                        TextColor="DarkGreen" />
 
-                    <Stepper Grid.Row="1" Grid.Column="2"
-                             x:Name="stp_criancas"
-                             Minimum="0"
-                             Maximum="10"
-                             Increment="1"
-                             Background="DarkOliveGreen" 
-                             BackgroundColor="DarkOliveGreen" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BindingContext="{x:Reference stp_criancas}"
+                        FontAttributes="Bold"
+                        Text="{Binding Value}"
+                        TextColor="Green" />
+
+                    <Stepper
+                        x:Name="stp_criancas"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Background="DarkOliveGreen"
+                        BackgroundColor="DarkOliveGreen"
+                        Increment="1"
+                        Maximum="10"
+                        Minimum="0" />
 
                 </Grid>
 
-                <Label Text="Escolha sua Suite"
-                       TextColor="DarkOliveGreen"
-                       HorizontalOptions="Center"
-                       Margin="10"
-                       Padding="10" />
+                <Label
+                    Margin="10"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    Text="Escolha sua Suite"
+                    TextColor="DarkOliveGreen" />
 
-                <Picker x:Name="pck_quarto"
-                        BackgroundColor="DarkOliveGreen" />
+                <Picker x:Name="pck_quarto" BackgroundColor="DarkOliveGreen" />
 
-                <Frame Padding="10"
-                       Margin="10">
+                <Frame Margin="10">
 
                     <VerticalStackLayout>
                         <Label Text="Período da Estadia" />
-                        
+
                         <HorizontalStackLayout>
                             <Label Text="Check-in" />
-                            <DatePicker x:Name="dtpck_checking"
-                                        Format="dd/MM/yyyy" />
+                            <DatePicker x:Name="dtpck_checking" Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout>
-                            <Label Text="Check-out"
-                                   Margin="5"/>
-                            <DatePicker x:Name="dtpck_checkout"
-                                        Format="dd/MM/yyyy" />
+                            <Label Margin="5" Text="Check-out" />
+                            <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
                     </VerticalStackLayout>
-                    
+
                 </Frame>
 
-                <Button Text="Avançar"
-                        BackgroundColor="DarkOliveGreen"
-                        TextColor="Bisque"
-                        Clicked="Button_Clicked" />
+                <Button
+                    BackgroundColor="DarkOliveGreen"
+                    Clicked="Button_Clicked"
+                    Text="Avançar"
+                    TextColor="Bisque" />
 
             </VerticalStackLayout>
 
