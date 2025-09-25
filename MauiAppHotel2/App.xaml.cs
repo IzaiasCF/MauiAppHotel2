@@ -6,7 +6,9 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            // MainPage = new AppShell();
+            // Alterando a página inicial
+            MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
         }
 
         // Definição da largura/altura do App
