@@ -11,7 +11,7 @@ public partial class TelaInicial : ContentPage
     {
 		try
 		{
-			Navigation.PushAsync(new ContratacaoHospedagem());
+			Navigation.PushAsync(new ContratacaoHospedagem((App)Application.Current));
 		}
 		catch (Exception ex)
 		{

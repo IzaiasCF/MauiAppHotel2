@@ -87,32 +87,36 @@
                     Text="Escolha sua Suite"
                     TextColor="DarkOliveGreen" />
 
-                <Picker x:Name="pck_quarto"
-                        ItemDisplayBinding="{Binding Descricao}"
-                        BackgroundColor="DarkOliveGreen" />
+                <Picker
+                    x:Name="pck_quarto"
+                    BackgroundColor="DarkOliveGreen"
+                    ItemDisplayBinding="{Binding Descricao}" />
 
                 <Frame Margin="10">
 
                     <VerticalStackLayout>
-                        
-                        <Label 
-                            HorizontalTextAlignment="Center"
+
+                        <Label
                             Margin="6"
-                            Text="Período da Estadia" 
+                            HorizontalTextAlignment="Center"
+                            Text="Período da Estadia"
                             TextColor="Green" />
 
                         <HorizontalStackLayout>
-                            <Label Text="Check-in"
-                                   TextColor="DarkOliveGreen"/>
-                            
-                            <DatePicker x:Name="dtpck_checking" Format="dd/MM/yyyy"
-                                        DateSelected="dtpck_checking_DateSelected" />
+                            <Label Text="Check-in" TextColor="DarkOliveGreen" />
+
+                            <DatePicker
+                                x:Name="dtpck_checking"
+                                DateSelected="dtpck_checking_DateSelected"
+                                Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout>
-                            <Label Margin="5" Text="Check-out"
-                                   TextColor="DarkOliveGreen"/>
-                            
+                            <Label
+                                Margin="5"
+                                Text="Check-out"
+                                TextColor="DarkOliveGreen" />
+
                             <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 

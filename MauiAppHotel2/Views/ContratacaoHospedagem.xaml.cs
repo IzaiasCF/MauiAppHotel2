@@ -6,11 +6,11 @@ public partial class ContratacaoHospedagem : ContentPage
 {
     App PropriedadesApp;
 
-    public ContratacaoHospedagem()
+    public ContratacaoHospedagem(App current)
     {
         InitializeComponent();
 
-        PropriedadesApp = (App)Application.Current;
+        PropriedadesApp = current;
 
         pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
 
@@ -34,12 +34,16 @@ public partial class ContratacaoHospedagem : ContentPage
                 DataCheckOut = dtpck_checkout.Date,
             };
 
-            await Navigation.PushAsync(new HospedagemContratada());
+            await Navigation.PushAsync(new HospedagemContratada()
+            {
+                BindingContext = h
+            });
         }
         catch (Exception ex)
         {
             await DisplayAlert("Aviso", ex.Message, "Ok");
         }
+
     }
 
     private void dtpck_checking_DateSelected(object sender, DateChangedEventArgs e)

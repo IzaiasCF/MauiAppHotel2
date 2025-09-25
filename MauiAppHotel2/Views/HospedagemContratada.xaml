@@ -20,7 +20,7 @@
             FontFamily="kalam"
             FontSize="25"
             HorizontalTextAlignment="Center"
-            Text="Suíte Super Luxo"
+            Text="{Binding QuartoSelecionado.Descricao}"
             TextColor="DarkOliveGreen" />
 
         <Frame Margin="10">
@@ -29,12 +29,12 @@
 
                 <HorizontalStackLayout>
                     <Label Text="Adultos: " TextColor="Green" />
-                    <Label Text="2" TextColor="DarkOliveGreen" />
+                    <Label Text="{Binding QntAdultos}" TextColor="DarkOliveGreen" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label Text="Crianças: " TextColor="green" />
-                    <Label Text="1" TextColor="DarkOliveGreen" />
+                    <Label Text="{Binding QntCriancas}" TextColor="DarkOliveGreen" />
                 </HorizontalStackLayout>
 
             </HorizontalStackLayout>
@@ -64,19 +64,18 @@
                 <Label
                     Grid.Row="1"
                     Grid.Column="0"
-                    Text="25/09/2025"
+                    Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
                     TextColor="DarkOliveGreen" />
                 <Label
                     Grid.Row="1"
                     Grid.Column="1"
-                    Text="28/09/2025"
+                    Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}"
                     TextColor="DarkOliveGreen" />
                 <Label
                     Grid.Row="1"
                     Grid.Column="2"
-                    Text="3"
+                    Text="{Binding Estadia}"
                     TextColor="DarkOliveGreen" />
-
 
             </Grid>
 
@@ -88,7 +87,7 @@
 
                 <Label Text="Valor Total: " TextColor="Green" />
 
-                <Label Text=" R$ 750,00 " TextColor="DarkOliveGreen" />
+                <Label Text="{Binding ValorTotal, StringFormat='{} {0:C}'}" TextColor="DarkOliveGreen" />
 
             </HorizontalStackLayout>
 
