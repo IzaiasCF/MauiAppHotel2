@@ -7,7 +7,7 @@
             InitializeComponent();
 
             // MainPage = new AppShell();
-            // Alterando a página inicial
+            // Alterando a página inicial:
             MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
         }
 
@@ -16,8 +16,8 @@
         {
             var window = base.CreateWindow(activationState);
 
-            window.Width = 400;  /* Altura */
-            window.Height = 700;  /* Largura */
+            window.Width = 350;  /* Largura */
+            window.Height = 700;  /* Altura */
 
             return window;
         }
