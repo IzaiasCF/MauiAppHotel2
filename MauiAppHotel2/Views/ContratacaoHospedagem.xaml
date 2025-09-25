@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="{StaticResource Gray900}"
-    Title="ContratacaoHospedagem">
+    Title="Contratação da Hospedagem">
 
     <VerticalStackLayout 
         VerticalOptions="CenterAndExpand"
@@ -24,7 +24,7 @@
             FontSize="30"
             TextColor="DarkOliveGreen" />
 
-        <Frame>
+        <Frame BackgroundColor="Black">
 
             <VerticalStackLayout>
 
@@ -78,7 +78,6 @@
                        Padding="10" />
 
                 <Picker x:Name="pck_quarto"
-                        Title="Seleciona sua acomodação"
                         BackgroundColor="DarkOliveGreen" />
 
                 <Frame Padding="10"
@@ -104,7 +103,10 @@
                     
                 </Frame>
 
-                <Button Text="Avançar" />
+                <Button Text="Avançar"
+                        BackgroundColor="DarkOliveGreen"
+                        TextColor="Bisque"
+                        Clicked="Button_Clicked" />
 
             </VerticalStackLayout>
 
