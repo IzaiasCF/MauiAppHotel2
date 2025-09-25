@@ -94,15 +94,25 @@
                 <Frame Margin="10">
 
                     <VerticalStackLayout>
-                        <Label Text="Período da Estadia" />
+                        
+                        <Label 
+                            HorizontalTextAlignment="Center"
+                            Margin="6"
+                            Text="Período da Estadia" 
+                            TextColor="Green" />
 
                         <HorizontalStackLayout>
-                            <Label Text="Check-in" />
-                            <DatePicker x:Name="dtpck_checking" Format="dd/MM/yyyy" />
+                            <Label Text="Check-in"
+                                   TextColor="DarkOliveGreen"/>
+                            
+                            <DatePicker x:Name="dtpck_checking" Format="dd/MM/yyyy"
+                                        DateSelected="dtpck_checking_DateSelected" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout>
-                            <Label Margin="5" Text="Check-out" />
+                            <Label Margin="5" Text="Check-out"
+                                   TextColor="DarkOliveGreen"/>
+                            
                             <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
