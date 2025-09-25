@@ -87,7 +87,9 @@
                     Text="Escolha sua Suite"
                     TextColor="DarkOliveGreen" />
 
-                <Picker x:Name="pck_quarto" BackgroundColor="DarkOliveGreen" />
+                <Picker x:Name="pck_quarto"
+                        ItemDisplayBinding="{Binding Descricao}"
+                        BackgroundColor="DarkOliveGreen" />
 
                 <Frame Margin="10">
 

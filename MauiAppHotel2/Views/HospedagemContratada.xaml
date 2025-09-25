@@ -3,24 +3,25 @@
     x:Class="MauiAppHotel2.Views.HospedagemContratada"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    NavigationPage.HasNavigationBar="False"
+    Title="Hospedagem Contratada"
     BackgroundColor="{StaticResource Gray900}"
-    Title="Hospedagem Contratada">
+    NavigationPage.HasNavigationBar="False">
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
-        <!--Inserção da imagem hotel.png-->
+        <!--  Inserção da imagem hotel.png  -->
         <Image
-             Aspect="AspectFit"
-             HeightRequest="150"
-             Source="hotel.png" />
+            Aspect="AspectFit"
+            HeightRequest="150"
+            Source="hotel.png" />
 
-        <Label Text="Suíte Super Luxo"
-               TextColor="DarkOliveGreen"
-               FontFamily="kalam"
-               FontSize="25"
-               HorizontalTextAlignment="Center"
-               Padding="10" />
+        <Label
+            Padding="10"
+            FontFamily="kalam"
+            FontSize="25"
+            HorizontalTextAlignment="Center"
+            Text="Suíte Super Luxo"
+            TextColor="DarkOliveGreen" />
 
         <Frame Margin="10">
 
@@ -28,58 +29,78 @@
 
                 <HorizontalStackLayout>
                     <Label Text="Adultos: " TextColor="Green" />
-                    <Label Text="2" 
-                    TextColor="DarkOliveGreen" />
+                    <Label Text="2" TextColor="DarkOliveGreen" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label Text="Crianças: " TextColor="green" />
-                    <Label Text="1" 
-                    TextColor="DarkOliveGreen" />
+                    <Label Text="1" TextColor="DarkOliveGreen" />
                 </HorizontalStackLayout>
-                
+
             </HorizontalStackLayout>
-            
+
         </Frame>
 
         <Frame Margin="10">
 
-            <Grid ColumnDefinitions="*, *, *"
-                  RowDefinitions="*, *, *">
+            <Grid ColumnDefinitions="*, *, *" RowDefinitions="*, *, *">
 
-                <Label Grid.Row="0" Grid.Column="0" Text="Check-In" TextColor="Green"/>
-                <Label Grid.Row="0" Grid.Column="1" Text="Check-Out" TextColor="Green" />
-                <Label Grid.Row="0" Grid.Column="2" Text="Estadia" TextColor="Green" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Check-In"
+                    TextColor="Green" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Check-Out"
+                    TextColor="Green" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Text="Estadia"
+                    TextColor="Green" />
 
-                <Label Grid.Row="1" Grid.Column="0" Text="25/09/2025" TextColor="DarkOliveGreen" />
-                <Label Grid.Row="1" Grid.Column="1" Text="28/09/2025" TextColor="DarkOliveGreen" />
-                <Label Grid.Row="1" Grid.Column="2" Text="3" TextColor="DarkOliveGreen" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="25/09/2025"
+                    TextColor="DarkOliveGreen" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="28/09/2025"
+                    TextColor="DarkOliveGreen" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Text="3"
+                    TextColor="DarkOliveGreen" />
 
 
             </Grid>
-            
+
         </Frame>
 
         <Frame Margin="10">
 
             <HorizontalStackLayout>
 
-                <Label Text="Valor Total: "
-                       TextColor="Green" />
+                <Label Text="Valor Total: " TextColor="Green" />
 
-                <Label Text=" R$ 750,00 "
-                       TextColor="DarkOliveGreen" />
+                <Label Text=" R$ 750,00 " TextColor="DarkOliveGreen" />
 
             </HorizontalStackLayout>
-            
+
         </Frame>
 
-        <Button Text="Voltar"
-                Margin="10"
-                HorizontalOptions="Center"
-                BackgroundColor="DarkOliveGreen"
-                TextColor="Bisque"
-                Clicked="Button_Clicked" />
+        <Button
+            Margin="10"
+            BackgroundColor="DarkOliveGreen"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            Text="Voltar"
+            TextColor="Bisque" />
 
     </VerticalStackLayout>
 </ContentPage>
