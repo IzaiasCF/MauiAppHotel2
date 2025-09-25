@@ -28,8 +28,8 @@
 
             <VerticalStackLayout>
 
-                <Grid RowDefinitions="auto, auto"
-                      ColumnDefinitions="*, *, 2">
+                <Grid RowDefinitions="*, *"
+                      ColumnDefinitions="*, *, *">
                     
                     <!--Grid dos adultos-->
                     <Label Grid.Row="0" Grid.Column="0"
@@ -46,7 +46,9 @@
                              x:Name="stp_adultos"
                              Minimum="0"
                              Maximum="10"
-                             Increment="1" />
+                             Increment="1"
+                             Background="DarkOliveGreen"
+                             BackgroundColor="DarkOliveGreen" />
 
                     <!--Grid das crianças-->
                     <Label Grid.Row="1" Grid.Column="0"
@@ -59,13 +61,50 @@
                            BindingContext="{x:Reference stp_criancas}"
                            FontAttributes="Bold" />
 
-                    <Stepper Grid.Row="0" Grid.Column="2"
+                    <Stepper Grid.Row="1" Grid.Column="2"
                              x:Name="stp_criancas"
                              Minimum="0"
                              Maximum="10"
-                             Increment="1" />
+                             Increment="1"
+                             Background="DarkOliveGreen" 
+                             BackgroundColor="DarkOliveGreen" />
 
                 </Grid>
+
+                <Label Text="Escolha sua Suite"
+                       TextColor="DarkOliveGreen"
+                       HorizontalOptions="Center"
+                       Margin="10"
+                       Padding="10" />
+
+                <Picker x:Name="pck_quarto"
+                        Title="Seleciona sua acomodação"
+                        BackgroundColor="DarkOliveGreen" />
+
+                <Frame Padding="10"
+                       Margin="10">
+
+                    <VerticalStackLayout>
+                        <Label Text="Período da Estadia" />
+                        
+                        <HorizontalStackLayout>
+                            <Label Text="Check-in" />
+                            <DatePicker x:Name="dtpck_checking"
+                                        Format="dd/MM/yyyy" />
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-out"
+                                   Margin="5"/>
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy" />
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                    
+                </Frame>
+
+                <Button Text="Avançar" />
 
             </VerticalStackLayout>
 
