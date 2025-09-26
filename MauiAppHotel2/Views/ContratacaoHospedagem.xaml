@@ -7,22 +7,25 @@
     BackgroundColor="{StaticResource Gray900}"
     NavigationPage.HasNavigationBar="False">
 
-    <VerticalStackLayout Padding="10" VerticalOptions="CenterAndExpand">
+    <VerticalStackLayout 
+        Padding="10"
+        Spacing="10"
+        VerticalOptions="CenterAndExpand">
 
         <!--  Inserção da imagem hotel.png  -->
         <Image
             Aspect="AspectFit"
-            HeightRequest="150"
+            HeightRequest="120"
             Source="hotel.png" />
 
         <Label
             FontFamily="Kalam"
-            FontSize="30"
+            FontSize="25"
             HorizontalOptions="Center"
             Text="Hotel Campos do Jordão"
             TextColor="DarkOliveGreen" />
 
-        <Frame Margin="5" BackgroundColor="Black">
+        <Frame BackgroundColor="Black">
 
             <VerticalStackLayout>
 
@@ -80,30 +83,46 @@
 
                 </Grid>
 
-                <Label
+        <Frame 
+            Padding="10" 
+            Margin="10"
+            BackgroundColor="DarkOliveGreen">
+                    
+            <VerticalStackLayout>
+                    
+                    <Label
                     Margin="10"
                     Padding="10"
                     HorizontalOptions="Center"
                     Text="Escolha sua Suite"
-                    TextColor="DarkOliveGreen" />
+                    TextTransform="Uppercase"
+                    TextColor="NavajoWhite" />
 
-                <Picker
+                    <Picker
                     x:Name="pck_quarto"
-                    BackgroundColor="DarkOliveGreen"
+                    Background="NavajoWhite"
                     ItemDisplayBinding="{Binding Descricao}" />
 
-                <Frame Margin="10">
+            </VerticalStackLayout>
 
-                    <VerticalStackLayout>
+        </Frame>
+
+                <Frame Padding="10"
+                       Margin="10"
+                       BackgroundColor="DarkOliveGreen">
+
+                    <VerticalStackLayout Spacing="10">
 
                         <Label
-                            Margin="6"
                             HorizontalTextAlignment="Center"
                             Text="Período da Estadia"
-                            TextColor="Green" />
+                            TextTransform="Uppercase"
+                            TextColor="NavajoWhite" />
 
-                        <HorizontalStackLayout>
-                            <Label Text="Check-in" TextColor="DarkOliveGreen" />
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label 
+                                Text="Check-in" 
+                                TextColor="NavajoWhite" />
 
                             <DatePicker
                                 x:Name="dtpck_checking"
@@ -111,11 +130,11 @@
                                 Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label
                                 Margin="5"
                                 Text="Check-out"
-                                TextColor="DarkOliveGreen" />
+                                TextColor="NavajoWhite" />
 
                             <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
@@ -128,7 +147,8 @@
                     BackgroundColor="DarkOliveGreen"
                     Clicked="Button_Clicked"
                     Text="Avançar"
-                    TextColor="Bisque" />
+                    HorizontalOptions="Center"
+                    TextColor="NavajoWhite" />
 
             </VerticalStackLayout>
 

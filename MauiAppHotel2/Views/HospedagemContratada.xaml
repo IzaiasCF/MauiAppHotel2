@@ -25,19 +25,19 @@
 
         <Frame Margin="10">
 
-            <HorizontalStackLayout>
+            <StackLayout Orientation="Horizontal">
 
-                <HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Adultos: " TextColor="Green" />
                     <Label Text="{Binding QntAdultos}" TextColor="DarkOliveGreen" />
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Crianças: " TextColor="green" />
                     <Label Text="{Binding QntCriancas}" TextColor="DarkOliveGreen" />
                 </HorizontalStackLayout>
 
-            </HorizontalStackLayout>
+            </StackLayout>
 
         </Frame>
 
@@ -83,7 +83,7 @@
 
         <Frame Margin="10">
 
-            <HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
 
                 <Label Text="Valor Total: " TextColor="Green" />
 
